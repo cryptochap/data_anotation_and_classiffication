@@ -22,7 +22,7 @@ emoji_category = pd.read_csv('files/emoji_category.csv')
 emoticon_category = pd.read_csv('files/emoticon_category.csv')
 
 
-# for each tweet and detect the emotion word
+# for each tweet detect the emotion word
 def get_emotion_words(tweet):
     words = []
     for word in tweet.split():
@@ -31,7 +31,7 @@ def get_emotion_words(tweet):
     print(words)
     return words
 
-# iterate over the tweets and get the emotion words
+# iterating over the tweets and extrating the emotion words
 def get_emotion_words_list(tweets):
     words_list = []
     for tweet in tweets['Tweet']:
@@ -43,7 +43,7 @@ def get_emotion_words_list(tweets):
     return words_list
 get_emotion_words_list(data_processed)
 
-# # check for emotion word and replace with emotion category
+# check for emotion word and replace with emotion category
 def replace_emotion_words(tweet):
     words = []
     for word in tweet.split():
@@ -160,7 +160,7 @@ def replace_emoticon_list(data_processed):
     return(emoticon_list)
 replace_emoticon_list(data_processed)
 
-# #replace emotion words with emotion category in tweets
+# replace emotion words with emotion category in tweets
 # def replace_emotion_words(tweet):
 #     words = []
 #     for word in tweet.split():
